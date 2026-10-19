@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Rewind Analytics</title>
+  <meta name="description" content="2.5 years of my own YouTube watch history, cleaned and analyzed with Python and SQL.">
+  <meta name="theme-color" content="#08080c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="https://www.linkedin.com/in/hmt-quin"><span class="mark">QN</span>Quin Nguyen</a>
+      <a class="code" href="https://github.com/anhnguyen302/youtube-viewing-insights">View code ↗</a>
+    </header>
+
+    <section class="hero reveal">
+      <span class="pill"><span class="live"></span><span data-k="range"></span> · Personal analytics</span>
+      <h1>My YouTube,<br><span class="grad">rewound.</span></h1>
+      <p>
+        I exported 2.5 years of my own watch history from Google Takeout and analyzed it with Python and SQL.
+        The pipeline removes ads, works out which country I was in from my sleep pattern, and classifies the language of every video.
+      </p>
+      <div class="chips">
+        <span class="chip">Python · JSON · regex</span><span class="chip">Time-zone inference</span>
+        <span class="chip">SQLite</span><span class="chip">SQL window functions</span><span class="chip">SVG charts</span>
+      </div>
+    </section>
+
+    <main class="bento">
+      <div class="tile span-3 stat reveal">
+        <div class="eyebrow">Videos watched</div>
+        <div class="big grad" data-k="videos"></div>
+        <div class="sub" data-k="per-day"></div>
+      </div>
+      <div class="tile span-3 stat with-ring reveal">
+        <div>
+          <div class="eyebrow">Were ads</div>
+          <div class="big" data-k="ads"></div>
+          <div class="sub" data-k="ads-n"></div>
+        </div>
+        <svg class="ring" width="76" height="76" viewBox="0 0 76 76" aria-hidden="true">
+          <circle class="bg" cx="38" cy="38" r="30" fill="none" stroke-width="9"/>
+          <circle class="fg" id="ring" cx="38" cy="38" r="30" fill="none" stroke-width="9"
+                  transform="rotate(-90 38 38)" stroke-dasharray="188.5" stroke-dashoffset="188.5"/>
+        </svg>
+      </div>
+      <div class="tile span-3 stat reveal">
+        <div class="eyebrow">Plays were replays</div>
+        <div class="big" data-k="replays"></div>
+        <div class="sub">Mostly music on repeat</div>
+      </div>
+      <div class="tile span-3 stat reveal">
+        <div class="eyebrow">Different channels</div>
+        <div class="big" data-k="channels"></div>
+        <div class="sub" data-k="months"></div>
+      </div>
+
+      <div class="tile reveal">
+        <div class="eyebrow">Timeline</div>
+        <h2>Two homes, one watch history</h2>
+        <p class="insight" id="monthly-sub"></p>
+        <div class="legend">
+          <span><span class="key" style="background:var(--s1)"></span>Detected in Chicago</span>
+          <span><span class="key" style="background:var(--s2)"></span>Detected in Vietnam</span>
+        </div>
+        <div class="chart" id="monthly"></div>
+      </div>
+
+      <div class="tile span-7 reveal">
+        <div class="eyebrow">Language</div>
+        <h2>Coming back to Vietnamese</h2>
+        <p class="insight" id="lang-sub"></p>
+        <div class="legend">
+          <span><span class="key" style="background:var(--s2)"></span>Vietnamese</span>
+          <span><span class="key" style="background:var(--s1)"></span>English</span>
+          <span><span class="key" style="background:var(--s3)"></span>Korean / Japanese</span>
+        </div>
+        <div class="chart" id="language"></div>
+      </div>
+      <div class="tile span-5 reveal">
+        <div class="eyebrow">Chicago vs. Vietnam</div>
+        <h2>Homesick, in numbers</h2>
+        <p class="insight" id="compare-sub"></p>
+        <div class="split" id="compare"></div>
+      </div>
+
+      <div class="tile span-7 reveal">
+        <div class="eyebrow">Channel loyalty</div>
+        <h2>A long tail with a loyal core</h2>
+        <p class="insight" id="channels-sub"></p>
+        <div class="chart" id="channels"></div>
+      </div>
+      <div class="tile span-5 reveal">
+        <div class="eyebrow">On repeat</div>
+        <h2>The replay habit</h2>
+        <p class="insight" id="replay-sub"></p>
+        <div id="top-track"></div>
+        <div class="chart" id="replays"></div>
+      </div>
+
+      <div class="tile span-7 reveal">
+        <div class="eyebrow">Rhythm</div>
+        <h2>A night watcher</h2>
+        <p class="insight" id="heat-note"></p>
+        <div class="chart" id="heatmap"></div>
+      </div>
+      <div class="tile span-5 reveal">
+        <div class="eyebrow">Sessions</div>
+        <h2>Rare binges, big share</h2>
+        <p class="insight" id="session-sub"></p>
+        <div class="chart" id="sessions"></div>
+      </div>
+
+      <div class="tile method reveal">
+        <div class="eyebrow">How it works</div>
+        <h2>Method</h2>
+        <div class="method-grid">
+          <div><h3>1 · Cleaning</h3><p>Takeout lists ads in the same file as real videos. The pipeline drops every entry tagged “From Google Ads” and anything that isn’t a watched video.</p></div>
+          <div><h3>2 · Time zones</h3><p>Takeout stores every time in UTC. For each month, the script tests Vietnam (UTC+7) and Chicago (UTC−5/−6) and picks the zone where I was least active from 2am to 8am. The result matches my real calendar.</p></div>
+          <div><h3>3 · Language</h3><p>Each title is classified with regex: Vietnamese diacritics, Korean Hangul or Japanese kana. Everything else counts as English.</p></div>
+          <div><h3>4 · Sessions</h3><p>SQL window functions (<code>LAG</code> plus a running <code>SUM</code>) start a new session after a 30-minute gap. The raw history never leaves my laptop.</p></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span>Built by <a href="https://www.linkedin.com/in/hmt-quin">Quin Nguyen</a> · Information &amp; Decision Sciences, UIC</span>
+      <a href="https://github.com/anhnguyen302/youtube-viewing-insights">Code on GitHub ↗</a>
+    </footer>
+  </div>
+
+  <script src="charts.js"></script>
+  <script>
+    const io = "IntersectionObserver" in window ? new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+    }), { threshold: 0.1 }) : null;
+    document.querySelectorAll(".reveal").forEach((n) => (io ? io.observe(n) : n.classList.add("in")));
+
+    const n = (v) => Math.round(v).toLocaleString("en-US");
+    const monthName = (m, long) => new Date(m + "-01T12:00").toLocaleDateString("en-US", long ? { month: "long", year: "numeric" } : { month: "short", year: "2-digit" });
+    const dayName = (d) => new Date(d + "T12:00").toLocaleDateString("en-US", { month: "short", year: "numeric" });
+    const set = (k, v) => document.querySelectorAll(`[data-k="${k}"]`).forEach((e) => (e.textContent = v));
+    const html = (id, s) => (document.getElementById(id).innerHTML = s);
+
+    fetch("data.json").then((r) => r.json()).then((d) => {
+      const k = d["01_kpis"][0];
+      const monthly = d["02_monthly"];
+      const adShare = (100 * k.ads) / (k.ads + k.videos);
+      set("range", `${dayName(k.first_day)} – ${dayName(k.last_day)}`);
+      set("videos", n(k.videos));
+      set("per-day", `About ${k.per_day} a day`);
+      set("ads", `${adShare.toFixed(0)}%`);
+      set("ads-n", `${n(k.ads)} ads filtered out`);
+      set("replays", `${(100 - k.unique_pct).toFixed(0)}%`);
+      set("channels", n(k.channels));
+      set("months", `Across ${monthly.length} months`);
+      const ring = document.getElementById("ring");
+      const fill = () => ring.setAttribute("stroke-dashoffset", 188.5 * (1 - adShare / 100));
+      io ? new IntersectionObserver((es, o) => es.forEach((e) => e.isIntersecting && (fill(), o.disconnect()))).observe(ring) : fill();
+
+      const peak = monthly.reduce((a, b) => (b.videos > a.videos ? b : a));
+      html("monthly-sub", `Each bar is colored by where the pipeline <b>detected</b> I was that month, using only timestamps. It found school years in Chicago and summers in Vietnam. Viewing peaked in <b>${monthName(peak.month, true)}</b> with ${n(peak.videos)} videos, ${(peak.videos / (k.videos / monthly.length)).toFixed(1)}× a typical month.`);
+      Charts.columns(document.getElementById("monthly"), monthly, {
+        label: "month", value: "videos", fmt: n, xfmt: monthName, values: false, height: 260,
+        color: (r) => (r.location === "Vietnam" ? "--s2" : "--s1"),
+        tip: (r) => `<b>${monthName(r.month, true)}</b><br>${n(r.videos)} videos<br>In ${r.location}`,
+      });
+
+      const lang = d["05_language_by_quarter"].filter((r) => r.vietnamese + r.english + r.korean_japanese >= 200);
+      const share = (r, key) => (100 * r[key]) / (r.vietnamese + r.english + r.korean_japanese);
+      const last = lang.at(-1), kpop = lang[0];
+      html("lang-sub", `Vietnamese went from <b>${share(lang[0], "vietnamese").toFixed(0)}%</b> to <b>${share(last, "vietnamese").toFixed(0)}%</b> of what I watch. Korean and Japanese videos were ${share(kpop, "korean_japanese").toFixed(0)}% in late 2023, then fell to 1–2% through 2025.`);
+      Charts.stacked(document.getElementById("language"), lang, {
+        x: "quarter", xfmt: (q, long) => (long ? q : q.replace(/^20(\d\d) /, "’$1 ")), height: 260,
+        series: [
+          { key: "vietnamese", name: "Vietnamese", color: "--s2" },
+          { key: "english", name: "English", color: "--s1" },
+          { key: "korean_japanese", name: "Korean / Japanese", color: "--s3" },
+        ],
+      });
+
+      const cmp = Object.fromEntries(d["06_location_compare"].map((r) => [r.location, r]));
+      html("compare-sub", `In Chicago I watch <b>more</b> videos per day, and more of them are in Vietnamese.`);
+      html("compare", ["Chicago", "Vietnam"].map((p) => `
+        <div class="side">
+          <div class="where"><span class="key" style="background:var(${p === "Vietnam" ? "--s2" : "--s1"})"></span>${p}</div>
+          <div class="n">${cmp[p].per_active_day}</div><div class="l">videos per active day</div>
+          <div class="n">${Math.round(cmp[p].vietnamese_pct)}%</div><div class="l">in Vietnamese</div>
+          <div class="foot">${n(cmp[p].active_days)} days · ${n(cmp[p].videos)} videos</div>
+        </div>`).join(""));
+
+      const loyal = d["03_channel_loyalty"];
+      const chPlays = loyal.reduce((t, r) => t + r.plays, 0), chCount = loyal.reduce((t, r) => t + r.channels, 0);
+      const core = loyal.filter((r) => r.sort_key >= 20);
+      const coreCh = core.reduce((t, r) => t + r.channels, 0), corePlays = core.reduce((t, r) => t + r.plays, 0);
+      const once = loyal.find((r) => r.sort_key === 1);
+      html("channels-sub", `<b>${((100 * once.channels) / chCount).toFixed(0)}%</b> of the channels I watched, I watched only once. Meanwhile just <b>${coreCh} channels</b> (${((100 * coreCh) / chCount).toFixed(0)}%) account for <b>${((100 * corePlays) / chPlays).toFixed(0)}%</b> of all my plays.`);
+      Charts.bars(document.getElementById("channels"), loyal.map((r) => ({ ...r, pct: (100 * r.plays) / chPlays, name: r.sort_key === 1 ? "1 play" : `${r.bucket} plays` })), {
+        label: "name", value: "pct", track: true, rowH: 44, barH: 14, labelMax: 110,
+        fmt: (v) => `${v.toFixed(0)}%`, color: (r) => (r.sort_key >= 20 ? "--s2" : "--s1"),
+        tip: (r) => `<b>Channels with ${r.name}</b><br>${n(r.channels)} channels<br>${n(r.plays)} plays (${r.pct.toFixed(1)}% of all)`,
+      });
+      const chNote = document.createElement("p");
+      chNote.className = "insight";
+      chNote.style.margin = "16px 0 0";
+      chNote.textContent = "Bars show each group’s share of all plays. Channels are grouped by how many times I played them.";
+      document.getElementById("channels").after(chNote);
+
+      const rp = d["07_replays"];
+      const vids = rp.reduce((t, r) => t + r.videos, 0), plays = rp.reduce((t, r) => t + r.plays, 0);
+      const heavy = rp.filter((r) => r.sort_key >= 10);
+      const heavyVids = heavy.reduce((t, r) => t + r.videos, 0), heavyPlays = heavy.reduce((t, r) => t + r.plays, 0);
+      const top = rp.at(-1).max_plays;
+      html("replay-sub", `Most videos I watch once (${((100 * rp[0].videos) / vids).toFixed(0)}%). But <b>${heavyVids} videos</b>, mostly music, were played 10+ times, and they make up <b>${((100 * heavyPlays) / plays).toFixed(0)}%</b> of all my plays.`);
+      html("top-track", `<div class="top-track"><div class="plays">${top}×</div><div><div class="t">Plays of my single most-replayed video</div><div class="c">All 10 of my most-replayed videos are songs</div></div></div>`);
+      Charts.bars(document.getElementById("replays"), rp.map((r) => ({ ...r, name: r.bucket })), {
+        label: "name", value: "videos", fmt: n, track: true, rowH: 40, barH: 12, labelMax: 80,
+        color: (r) => (r.sort_key >= 10 ? "--s2" : "--s1"),
+        tip: (r) => `<b>Played ${r.bucket === "Once" ? "once" : r.bucket}</b><br>${n(r.videos)} videos<br>${n(r.plays)} plays`,
+      });
+
+      const grid = Array.from({ length: 7 }, () => Array(24).fill(0));
+      d["04_heatmap"].forEach((r) => (grid[r.weekday][r.hour] = r.videos));
+      const byHour = Array.from({ length: 24 }, (_, h) => grid.reduce((s, row) => s + row[h], 0));
+      const total = byHour.reduce((a, b) => a + b, 0);
+      const evening = [20, 21, 22, 23, 0, 1].reduce((s, h) => s + byHour[h], 0);
+      const topHour = byHour.indexOf(Math.max(...byHour));
+      const hourLabel = (h) => (h === 0 ? "12am" : h === 12 ? "12pm" : h < 12 ? `${h}am` : `${h - 12}pm`);
+      html("heat-note", `<b>${((100 * evening) / total).toFixed(0)}%</b> of my viewing happens between 8pm and 2am, in local time. The busiest hour is <b>${hourLabel(topHour)}</b>. Hover a cell for the count.`);
+      Charts.heatmap(document.getElementById("heatmap"), grid, { rowLabels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], fmt: n, unit: "videos" });
+
+      const ses = d["08_sessions"];
+      const tv = ses.reduce((s, r) => s + r.videos, 0), ts = ses.reduce((s, r) => s + r.sessions, 0);
+      const binge = ses.find((r) => r.bucket === "20+");
+      html("session-sub", `Only <b>${((100 * binge.sessions) / ts).toFixed(0)}%</b> of my sessions are 20+ video binges, but they hold <b>${((100 * binge.videos) / tv).toFixed(0)}%</b> of everything I watch.`);
+      Charts.columns(document.getElementById("sessions"), ses.map((r) => ({ ...r, pct: (100 * r.videos) / tv, label: r.bucket === "1 video" ? "1 video" : `${r.bucket} videos` })), {
+        label: "label", value: "pct", height: 260,
+        color: (r) => (r.bucket === "20+" ? "--s2" : "--s1"),
+        fmt: (v, axis) => (axis ? `${Math.round(v)}%` : `${v.toFixed(0)}%`),
+        tip: (r) => `<b>Sessions of ${r.label}</b><br>${n(r.sessions)} sessions<br>${n(r.videos)} videos (${r.pct.toFixed(1)}%)`,
+      });
+    });
+  </script>
+</body>
+</html>

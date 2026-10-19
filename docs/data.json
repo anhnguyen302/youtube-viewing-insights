@@ -1,0 +1,1167 @@
+{
+ "01_kpis": [
+  {
+   "videos": 7456,
+   "channels": 1545,
+   "first_day": "2023-09-19",
+   "last_day": "2026-02-26",
+   "per_day": 8.4,
+   "ads": 6238.0,
+   "unique_pct": 49.1
+  }
+ ],
+ "02_monthly": [
+  {
+   "month": "2023-09",
+   "location": "Chicago",
+   "videos": 88
+  },
+  {
+   "month": "2023-10",
+   "location": "Chicago",
+   "videos": 213
+  },
+  {
+   "month": "2023-11",
+   "location": "Chicago",
+   "videos": 428
+  },
+  {
+   "month": "2023-12",
+   "location": "Chicago",
+   "videos": 208
+  },
+  {
+   "month": "2024-01",
+   "location": "Vietnam",
+   "videos": 93
+  },
+  {
+   "month": "2024-02",
+   "location": "Chicago",
+   "videos": 116
+  },
+  {
+   "month": "2024-03",
+   "location": "Chicago",
+   "videos": 152
+  },
+  {
+   "month": "2024-04",
+   "location": "Chicago",
+   "videos": 319
+  },
+  {
+   "month": "2024-05",
+   "location": "Chicago",
+   "videos": 510
+  },
+  {
+   "month": "2024-06",
+   "location": "Vietnam",
+   "videos": 214
+  },
+  {
+   "month": "2024-07",
+   "location": "Vietnam",
+   "videos": 233
+  },
+  {
+   "month": "2024-08",
+   "location": "Vietnam",
+   "videos": 145
+  },
+  {
+   "month": "2024-09",
+   "location": "Chicago",
+   "videos": 333
+  },
+  {
+   "month": "2024-10",
+   "location": "Chicago",
+   "videos": 108
+  },
+  {
+   "month": "2024-11",
+   "location": "Chicago",
+   "videos": 305
+  },
+  {
+   "month": "2024-12",
+   "location": "Chicago",
+   "videos": 189
+  },
+  {
+   "month": "2025-01",
+   "location": "Chicago",
+   "videos": 128
+  },
+  {
+   "month": "2025-02",
+   "location": "Chicago",
+   "videos": 52
+  },
+  {
+   "month": "2025-03",
+   "location": "Chicago",
+   "videos": 215
+  },
+  {
+   "month": "2025-04",
+   "location": "Chicago",
+   "videos": 206
+  },
+  {
+   "month": "2025-05",
+   "location": "Vietnam",
+   "videos": 209
+  },
+  {
+   "month": "2025-06",
+   "location": "Vietnam",
+   "videos": 149
+  },
+  {
+   "month": "2025-07",
+   "location": "Vietnam",
+   "videos": 143
+  },
+  {
+   "month": "2025-08",
+   "location": "Vietnam",
+   "videos": 299
+  },
+  {
+   "month": "2025-09",
+   "location": "Chicago",
+   "videos": 154
+  },
+  {
+   "month": "2025-10",
+   "location": "Chicago",
+   "videos": 435
+  },
+  {
+   "month": "2025-11",
+   "location": "Chicago",
+   "videos": 100
+  },
+  {
+   "month": "2025-12",
+   "location": "Chicago",
+   "videos": 207
+  },
+  {
+   "month": "2026-01",
+   "location": "Chicago",
+   "videos": 537
+  },
+  {
+   "month": "2026-02",
+   "location": "Chicago",
+   "videos": 968
+  }
+ ],
+ "03_channel_loyalty": [
+  {
+   "bucket": "1 play",
+   "sort_key": 1,
+   "channels": 950,
+   "plays": 950
+  },
+  {
+   "bucket": "2–4",
+   "sort_key": 2,
+   "channels": 343,
+   "plays": 851
+  },
+  {
+   "bucket": "5–19",
+   "sort_key": 5,
+   "channels": 181,
+   "plays": 1807
+  },
+  {
+   "bucket": "20–99",
+   "sort_key": 20,
+   "channels": 64,
+   "plays": 2650
+  },
+  {
+   "bucket": "100+",
+   "sort_key": 105,
+   "channels": 7,
+   "plays": 1020
+  }
+ ],
+ "04_heatmap": [
+  {
+   "weekday": 0,
+   "hour": 0,
+   "videos": 57
+  },
+  {
+   "weekday": 0,
+   "hour": 1,
+   "videos": 24
+  },
+  {
+   "weekday": 0,
+   "hour": 2,
+   "videos": 18
+  },
+  {
+   "weekday": 0,
+   "hour": 3,
+   "videos": 3
+  },
+  {
+   "weekday": 0,
+   "hour": 4,
+   "videos": 2
+  },
+  {
+   "weekday": 0,
+   "hour": 5,
+   "videos": 8
+  },
+  {
+   "weekday": 0,
+   "hour": 6,
+   "videos": 57
+  },
+  {
+   "weekday": 0,
+   "hour": 7,
+   "videos": 34
+  },
+  {
+   "weekday": 0,
+   "hour": 8,
+   "videos": 27
+  },
+  {
+   "weekday": 0,
+   "hour": 9,
+   "videos": 29
+  },
+  {
+   "weekday": 0,
+   "hour": 10,
+   "videos": 60
+  },
+  {
+   "weekday": 0,
+   "hour": 11,
+   "videos": 59
+  },
+  {
+   "weekday": 0,
+   "hour": 12,
+   "videos": 24
+  },
+  {
+   "weekday": 0,
+   "hour": 13,
+   "videos": 37
+  },
+  {
+   "weekday": 0,
+   "hour": 14,
+   "videos": 39
+  },
+  {
+   "weekday": 0,
+   "hour": 15,
+   "videos": 40
+  },
+  {
+   "weekday": 0,
+   "hour": 16,
+   "videos": 72
+  },
+  {
+   "weekday": 0,
+   "hour": 17,
+   "videos": 36
+  },
+  {
+   "weekday": 0,
+   "hour": 18,
+   "videos": 50
+  },
+  {
+   "weekday": 0,
+   "hour": 19,
+   "videos": 95
+  },
+  {
+   "weekday": 0,
+   "hour": 20,
+   "videos": 72
+  },
+  {
+   "weekday": 0,
+   "hour": 21,
+   "videos": 58
+  },
+  {
+   "weekday": 0,
+   "hour": 22,
+   "videos": 65
+  },
+  {
+   "weekday": 0,
+   "hour": 23,
+   "videos": 35
+  },
+  {
+   "weekday": 1,
+   "hour": 0,
+   "videos": 9
+  },
+  {
+   "weekday": 1,
+   "hour": 2,
+   "videos": 8
+  },
+  {
+   "weekday": 1,
+   "hour": 3,
+   "videos": 17
+  },
+  {
+   "weekday": 1,
+   "hour": 4,
+   "videos": 12
+  },
+  {
+   "weekday": 1,
+   "hour": 5,
+   "videos": 12
+  },
+  {
+   "weekday": 1,
+   "hour": 6,
+   "videos": 22
+  },
+  {
+   "weekday": 1,
+   "hour": 7,
+   "videos": 16
+  },
+  {
+   "weekday": 1,
+   "hour": 8,
+   "videos": 45
+  },
+  {
+   "weekday": 1,
+   "hour": 9,
+   "videos": 53
+  },
+  {
+   "weekday": 1,
+   "hour": 10,
+   "videos": 39
+  },
+  {
+   "weekday": 1,
+   "hour": 11,
+   "videos": 37
+  },
+  {
+   "weekday": 1,
+   "hour": 12,
+   "videos": 20
+  },
+  {
+   "weekday": 1,
+   "hour": 13,
+   "videos": 26
+  },
+  {
+   "weekday": 1,
+   "hour": 14,
+   "videos": 34
+  },
+  {
+   "weekday": 1,
+   "hour": 15,
+   "videos": 85
+  },
+  {
+   "weekday": 1,
+   "hour": 16,
+   "videos": 73
+  },
+  {
+   "weekday": 1,
+   "hour": 17,
+   "videos": 61
+  },
+  {
+   "weekday": 1,
+   "hour": 18,
+   "videos": 83
+  },
+  {
+   "weekday": 1,
+   "hour": 19,
+   "videos": 65
+  },
+  {
+   "weekday": 1,
+   "hour": 20,
+   "videos": 81
+  },
+  {
+   "weekday": 1,
+   "hour": 21,
+   "videos": 67
+  },
+  {
+   "weekday": 1,
+   "hour": 22,
+   "videos": 109
+  },
+  {
+   "weekday": 1,
+   "hour": 23,
+   "videos": 152
+  },
+  {
+   "weekday": 2,
+   "hour": 0,
+   "videos": 35
+  },
+  {
+   "weekday": 2,
+   "hour": 1,
+   "videos": 2
+  },
+  {
+   "weekday": 2,
+   "hour": 3,
+   "videos": 66
+  },
+  {
+   "weekday": 2,
+   "hour": 4,
+   "videos": 12
+  },
+  {
+   "weekday": 2,
+   "hour": 5,
+   "videos": 22
+  },
+  {
+   "weekday": 2,
+   "hour": 6,
+   "videos": 15
+  },
+  {
+   "weekday": 2,
+   "hour": 7,
+   "videos": 26
+  },
+  {
+   "weekday": 2,
+   "hour": 8,
+   "videos": 16
+  },
+  {
+   "weekday": 2,
+   "hour": 9,
+   "videos": 25
+  },
+  {
+   "weekday": 2,
+   "hour": 10,
+   "videos": 68
+  },
+  {
+   "weekday": 2,
+   "hour": 11,
+   "videos": 29
+  },
+  {
+   "weekday": 2,
+   "hour": 12,
+   "videos": 67
+  },
+  {
+   "weekday": 2,
+   "hour": 13,
+   "videos": 29
+  },
+  {
+   "weekday": 2,
+   "hour": 14,
+   "videos": 22
+  },
+  {
+   "weekday": 2,
+   "hour": 15,
+   "videos": 54
+  },
+  {
+   "weekday": 2,
+   "hour": 16,
+   "videos": 49
+  },
+  {
+   "weekday": 2,
+   "hour": 17,
+   "videos": 57
+  },
+  {
+   "weekday": 2,
+   "hour": 18,
+   "videos": 55
+  },
+  {
+   "weekday": 2,
+   "hour": 19,
+   "videos": 65
+  },
+  {
+   "weekday": 2,
+   "hour": 20,
+   "videos": 170
+  },
+  {
+   "weekday": 2,
+   "hour": 21,
+   "videos": 131
+  },
+  {
+   "weekday": 2,
+   "hour": 22,
+   "videos": 77
+  },
+  {
+   "weekday": 2,
+   "hour": 23,
+   "videos": 73
+  },
+  {
+   "weekday": 3,
+   "hour": 0,
+   "videos": 62
+  },
+  {
+   "weekday": 3,
+   "hour": 1,
+   "videos": 26
+  },
+  {
+   "weekday": 3,
+   "hour": 3,
+   "videos": 5
+  },
+  {
+   "weekday": 3,
+   "hour": 4,
+   "videos": 4
+  },
+  {
+   "weekday": 3,
+   "hour": 5,
+   "videos": 3
+  },
+  {
+   "weekday": 3,
+   "hour": 6,
+   "videos": 21
+  },
+  {
+   "weekday": 3,
+   "hour": 7,
+   "videos": 9
+  },
+  {
+   "weekday": 3,
+   "hour": 8,
+   "videos": 25
+  },
+  {
+   "weekday": 3,
+   "hour": 9,
+   "videos": 30
+  },
+  {
+   "weekday": 3,
+   "hour": 10,
+   "videos": 49
+  },
+  {
+   "weekday": 3,
+   "hour": 11,
+   "videos": 62
+  },
+  {
+   "weekday": 3,
+   "hour": 12,
+   "videos": 33
+  },
+  {
+   "weekday": 3,
+   "hour": 13,
+   "videos": 30
+  },
+  {
+   "weekday": 3,
+   "hour": 14,
+   "videos": 47
+  },
+  {
+   "weekday": 3,
+   "hour": 15,
+   "videos": 78
+  },
+  {
+   "weekday": 3,
+   "hour": 16,
+   "videos": 123
+  },
+  {
+   "weekday": 3,
+   "hour": 17,
+   "videos": 108
+  },
+  {
+   "weekday": 3,
+   "hour": 18,
+   "videos": 77
+  },
+  {
+   "weekday": 3,
+   "hour": 19,
+   "videos": 45
+  },
+  {
+   "weekday": 3,
+   "hour": 20,
+   "videos": 77
+  },
+  {
+   "weekday": 3,
+   "hour": 21,
+   "videos": 80
+  },
+  {
+   "weekday": 3,
+   "hour": 22,
+   "videos": 62
+  },
+  {
+   "weekday": 3,
+   "hour": 23,
+   "videos": 42
+  },
+  {
+   "weekday": 4,
+   "hour": 0,
+   "videos": 21
+  },
+  {
+   "weekday": 4,
+   "hour": 1,
+   "videos": 8
+  },
+  {
+   "weekday": 4,
+   "hour": 2,
+   "videos": 20
+  },
+  {
+   "weekday": 4,
+   "hour": 3,
+   "videos": 20
+  },
+  {
+   "weekday": 4,
+   "hour": 4,
+   "videos": 6
+  },
+  {
+   "weekday": 4,
+   "hour": 5,
+   "videos": 24
+  },
+  {
+   "weekday": 4,
+   "hour": 6,
+   "videos": 54
+  },
+  {
+   "weekday": 4,
+   "hour": 7,
+   "videos": 84
+  },
+  {
+   "weekday": 4,
+   "hour": 8,
+   "videos": 19
+  },
+  {
+   "weekday": 4,
+   "hour": 9,
+   "videos": 29
+  },
+  {
+   "weekday": 4,
+   "hour": 10,
+   "videos": 36
+  },
+  {
+   "weekday": 4,
+   "hour": 11,
+   "videos": 12
+  },
+  {
+   "weekday": 4,
+   "hour": 12,
+   "videos": 54
+  },
+  {
+   "weekday": 4,
+   "hour": 13,
+   "videos": 47
+  },
+  {
+   "weekday": 4,
+   "hour": 14,
+   "videos": 26
+  },
+  {
+   "weekday": 4,
+   "hour": 15,
+   "videos": 49
+  },
+  {
+   "weekday": 4,
+   "hour": 16,
+   "videos": 89
+  },
+  {
+   "weekday": 4,
+   "hour": 17,
+   "videos": 74
+  },
+  {
+   "weekday": 4,
+   "hour": 18,
+   "videos": 36
+  },
+  {
+   "weekday": 4,
+   "hour": 19,
+   "videos": 98
+  },
+  {
+   "weekday": 4,
+   "hour": 20,
+   "videos": 61
+  },
+  {
+   "weekday": 4,
+   "hour": 21,
+   "videos": 83
+  },
+  {
+   "weekday": 4,
+   "hour": 22,
+   "videos": 54
+  },
+  {
+   "weekday": 4,
+   "hour": 23,
+   "videos": 65
+  },
+  {
+   "weekday": 5,
+   "hour": 0,
+   "videos": 40
+  },
+  {
+   "weekday": 5,
+   "hour": 1,
+   "videos": 27
+  },
+  {
+   "weekday": 5,
+   "hour": 2,
+   "videos": 19
+  },
+  {
+   "weekday": 5,
+   "hour": 4,
+   "videos": 1
+  },
+  {
+   "weekday": 5,
+   "hour": 5,
+   "videos": 4
+  },
+  {
+   "weekday": 5,
+   "hour": 6,
+   "videos": 19
+  },
+  {
+   "weekday": 5,
+   "hour": 7,
+   "videos": 5
+  },
+  {
+   "weekday": 5,
+   "hour": 8,
+   "videos": 40
+  },
+  {
+   "weekday": 5,
+   "hour": 9,
+   "videos": 52
+  },
+  {
+   "weekday": 5,
+   "hour": 10,
+   "videos": 43
+  },
+  {
+   "weekday": 5,
+   "hour": 11,
+   "videos": 53
+  },
+  {
+   "weekday": 5,
+   "hour": 12,
+   "videos": 48
+  },
+  {
+   "weekday": 5,
+   "hour": 13,
+   "videos": 23
+  },
+  {
+   "weekday": 5,
+   "hour": 14,
+   "videos": 27
+  },
+  {
+   "weekday": 5,
+   "hour": 15,
+   "videos": 49
+  },
+  {
+   "weekday": 5,
+   "hour": 16,
+   "videos": 39
+  },
+  {
+   "weekday": 5,
+   "hour": 17,
+   "videos": 71
+  },
+  {
+   "weekday": 5,
+   "hour": 18,
+   "videos": 74
+  },
+  {
+   "weekday": 5,
+   "hour": 19,
+   "videos": 57
+  },
+  {
+   "weekday": 5,
+   "hour": 20,
+   "videos": 56
+  },
+  {
+   "weekday": 5,
+   "hour": 21,
+   "videos": 60
+  },
+  {
+   "weekday": 5,
+   "hour": 22,
+   "videos": 40
+  },
+  {
+   "weekday": 5,
+   "hour": 23,
+   "videos": 48
+  },
+  {
+   "weekday": 6,
+   "hour": 0,
+   "videos": 51
+  },
+  {
+   "weekday": 6,
+   "hour": 1,
+   "videos": 17
+  },
+  {
+   "weekday": 6,
+   "hour": 2,
+   "videos": 2
+  },
+  {
+   "weekday": 6,
+   "hour": 3,
+   "videos": 1
+  },
+  {
+   "weekday": 6,
+   "hour": 4,
+   "videos": 1
+  },
+  {
+   "weekday": 6,
+   "hour": 6,
+   "videos": 61
+  },
+  {
+   "weekday": 6,
+   "hour": 7,
+   "videos": 32
+  },
+  {
+   "weekday": 6,
+   "hour": 8,
+   "videos": 66
+  },
+  {
+   "weekday": 6,
+   "hour": 9,
+   "videos": 20
+  },
+  {
+   "weekday": 6,
+   "hour": 10,
+   "videos": 39
+  },
+  {
+   "weekday": 6,
+   "hour": 11,
+   "videos": 44
+  },
+  {
+   "weekday": 6,
+   "hour": 12,
+   "videos": 48
+  },
+  {
+   "weekday": 6,
+   "hour": 13,
+   "videos": 58
+  },
+  {
+   "weekday": 6,
+   "hour": 14,
+   "videos": 66
+  },
+  {
+   "weekday": 6,
+   "hour": 15,
+   "videos": 99
+  },
+  {
+   "weekday": 6,
+   "hour": 16,
+   "videos": 101
+  },
+  {
+   "weekday": 6,
+   "hour": 17,
+   "videos": 84
+  },
+  {
+   "weekday": 6,
+   "hour": 18,
+   "videos": 35
+  },
+  {
+   "weekday": 6,
+   "hour": 19,
+   "videos": 47
+  },
+  {
+   "weekday": 6,
+   "hour": 20,
+   "videos": 67
+  },
+  {
+   "weekday": 6,
+   "hour": 21,
+   "videos": 56
+  },
+  {
+   "weekday": 6,
+   "hour": 22,
+   "videos": 66
+  },
+  {
+   "weekday": 6,
+   "hour": 23,
+   "videos": 41
+  }
+ ],
+ "05_language_by_quarter": [
+  {
+   "quarter": "2023 Q3",
+   "vietnamese": 38,
+   "english": 38,
+   "korean_japanese": 4
+  },
+  {
+   "quarter": "2023 Q4",
+   "vietnamese": 400,
+   "english": 259,
+   "korean_japanese": 128
+  },
+  {
+   "quarter": "2024 Q1",
+   "vietnamese": 225,
+   "english": 104,
+   "korean_japanese": 25
+  },
+  {
+   "quarter": "2024 Q2",
+   "vietnamese": 351,
+   "english": 586,
+   "korean_japanese": 92
+  },
+  {
+   "quarter": "2024 Q3",
+   "vietnamese": 333,
+   "english": 304,
+   "korean_japanese": 53
+  },
+  {
+   "quarter": "2024 Q4",
+   "vietnamese": 252,
+   "english": 323,
+   "korean_japanese": 8
+  },
+  {
+   "quarter": "2025 Q1",
+   "vietnamese": 218,
+   "english": 161,
+   "korean_japanese": 4
+  },
+  {
+   "quarter": "2025 Q2",
+   "vietnamese": 299,
+   "english": 248,
+   "korean_japanese": 12
+  },
+  {
+   "quarter": "2025 Q3",
+   "vietnamese": 292,
+   "english": 282,
+   "korean_japanese": 13
+  },
+  {
+   "quarter": "2025 Q4",
+   "vietnamese": 515,
+   "english": 202,
+   "korean_japanese": 10
+  },
+  {
+   "quarter": "2026 Q1",
+   "vietnamese": 957,
+   "english": 452,
+   "korean_japanese": 90
+  }
+ ],
+ "06_location_compare": [
+  {
+   "location": "Chicago",
+   "videos": 5971,
+   "active_days": 458,
+   "per_active_day": 13.0,
+   "vietnamese_pct": 55.0
+  },
+  {
+   "location": "Vietnam",
+   "videos": 1485,
+   "active_days": 174,
+   "per_active_day": 8.5,
+   "vietnamese_pct": 46.5
+  }
+ ],
+ "07_replays": [
+  {
+   "bucket": "Once",
+   "sort_key": 1,
+   "max_plays": 1,
+   "videos": 2814,
+   "plays": 2814
+  },
+  {
+   "bucket": "2–4×",
+   "sort_key": 2,
+   "max_plays": 4,
+   "videos": 561,
+   "plays": 1409
+  },
+  {
+   "bucket": "5–9×",
+   "sort_key": 5,
+   "max_plays": 9,
+   "videos": 165,
+   "plays": 1106
+  },
+  {
+   "bucket": "10–19×",
+   "sort_key": 10,
+   "max_plays": 19,
+   "videos": 91,
+   "plays": 1201
+  },
+  {
+   "bucket": "20×+",
+   "sort_key": 20,
+   "max_plays": 46,
+   "videos": 32,
+   "plays": 926
+  }
+ ],
+ "08_sessions": [
+  {
+   "bucket": "1 video",
+   "sort_key": 1,
+   "sessions": 541,
+   "videos": 541
+  },
+  {
+   "bucket": "2–3",
+   "sort_key": 2,
+   "sessions": 349,
+   "videos": 816
+  },
+  {
+   "bucket": "4–9",
+   "sort_key": 4,
+   "sessions": 295,
+   "videos": 1719
+  },
+  {
+   "bucket": "10–19",
+   "sort_key": 10,
+   "sessions": 121,
+   "videos": 1610
+  },
+  {
+   "bucket": "20+",
+   "sort_key": 20,
+   "sessions": 85,
+   "videos": 2770
+  }
+ ]
+}
